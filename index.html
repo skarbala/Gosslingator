@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Gosslingator</title>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+</head>
+<style>
+  body {
+    background-image: url("lightpaperfibers.png");
+  }
+
+  img {
+    float: left;
+    position: absolute;
+    z-index: -1;
+  }
+
+  div.buttons {
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  button {
+    margin: 0 20px;
+    z-index: 0;
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: #454543;
+    font-size: 1.5em;
+    border: none;
+    transition: all 200ms ease-in-out;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Monoton', serif;
+    -webkit-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+    -moz-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+    box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+  }
+
+  button:active {
+    -webkit-box-shadow: none;
+    transform: translate(8px, 8px);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:disabled {
+    background-color: #767674;
+  }
+
+  button#addRyan:active {
+    background-color: #00d701;
+  }
+
+  button#removeRyan:active {
+    background-color: #d70026;
+  }
+
+  h1 {
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    font-family: 'Monoton', serif;
+    font-size: 5em;
+    text-align: center;
+    color: #454543;
+  }
+
+</style>
+<body>
+<div id="app">
+  <div class="upper">
+    <h1>Goslingate me</h1>
+    <div class="buttons">
+      <button @click="addRyan" id="addRyan">Ryan!</button>
+      <button
+        @click="removeRyan"
+        id="removeRyan"
+        :class="{ disabled: isDisabled }"
+        :disabled="this.ryans.length === 0">Ryan out!
+      </button>
+    </div>
+  </div>
+  <img v-for="ryan in ryans"
+       src="ryan.png"
+       :alt="ryan.id"
+       v-bind:style="{ width: ryan.width+ 'px', top:ryan.top + 'px', left:ryan.left + 'px'}"
+  >
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            ryans: []
+        },
+        methods: {
+            addRyan: function () {
+                let ryan = {
+                    id: this.ryans.length + 1,
+                    width: Math.floor((Math.random() * 250) + 50),
+                    top: Math.floor((Math.random() * 500) + 50),
+                    left: Math.floor((Math.random() * document.body.clientWidth) - 200)
+                };
+                this.ryans.push(ryan);
+            }
+            ,
+            removeRyan: function () {
+                this.ryans.splice(-1, 1)
+            }
+        },
+    });
+</script>
+</html>
