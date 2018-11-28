@@ -1,4 +1,4 @@
-before('open main page', () => cy.visit('http://localhost:8888'));
+before('open main page', () => cy.visit(''));
 describe('Adding ryans', () => {
     it('should add one ryan ', () => {
         cy.get('#addRyan').click();

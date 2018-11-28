@@ -14,7 +14,7 @@ new Vue({
             this.ryans.push(ryan);
         },
         removeSpecificRyan: function (ryan) {
-            var index = this.ryans.map(ryan => {
+            let index = this.ryans.map(ryan => {
                 return ryan.id;
             }).indexOf(ryan.id);
             this.ryans.splice(index, 1);
@@ -26,6 +26,10 @@ new Vue({
     computed: {
         isDisabled: function () {
             return this.ryans.length === 0;
+        },
+        tooManyRyans: function () {
+            return this.ryans.length === 50;
         }
     }
-});
+})
+;

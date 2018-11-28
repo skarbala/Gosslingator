@@ -20,12 +20,16 @@
       </button>
     </div>
   </div>
-  <img v-for="ryan in ryans"
-       @click="removeSpecificRyan(ryan)"
-       src="assets/ryan.png"
-       :alt="ryan.id"
-       v-bind:style="{ width: ryan.width+ 'px', top:ryan.top + 'px', left:ryan.left + 'px'}"
-  >
+  <div>
+    <img v-for="ryan in ryans"
+         @click="removeSpecificRyan(ryan)"
+         src="assets/ryan.png"
+         :alt="ryan.id"
+         v-bind:style="{ width: ryan.width+ 'px', top:ryan.top + 'px', left:ryan.left + 'px'}"
+    ></div>
+  <div v-if="tooManyRyans">
+    <h1 class="tooManyRyans">number of <br><span>ryans</span><br>is too damn<br><span>high</span></h1>
+  </div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

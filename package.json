@@ -18,8 +18,5 @@
   "homepage": "https://github.com/skarbala/Gosslingator#readme",
   "devDependencies": {
     "cypress": "^3.1.2"
-  },
-  "dependencies": {
-    "sass-watch": "^0.1.0"
   }
 }

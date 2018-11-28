@@ -1,13 +1,12 @@
 $primary-color: #454543;
-$primary-font:'Monoton','serif';
+$primary-font: 'Monoton', 'serif';
 body {
   background-image: url("assets/lightpaperfibers.png");
 }
 
 img {
-  float: left;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 div.buttons {
@@ -18,7 +17,7 @@ div.buttons {
 
 button {
   margin: 0 20px;
-  z-index: 0;
+  z-index: 1;
   display: inline-block;
   padding: 20px 50px;
   background-color: $primary-color;
@@ -27,7 +26,7 @@ button {
   transition: all 200ms ease-in-out;
   border-radius: 20px;
   color: #fff;
-  font-family:$primary-font;
+  font-family: $primary-font;
   -webkit-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
   -moz-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
   box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
@@ -57,4 +56,23 @@ h1 {
   font-size: 5em;
   text-align: center;
   color: $primary-color;
+  text-transform: uppercase;
 }
+
+@keyframes opacityPop {
+  0% {
+    color: #d70026;
+  }
+  100% {
+  }
+}
+
+h1.tooManyRyans {
+  animation: opacityPop 700ms ease-in-out;
+  animation-iteration-count: infinite;
+  font-size: 4em;
+  span {
+    font-size: 1.8em;
+  }
+}
+

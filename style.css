@@ -3,7 +3,6 @@ body {
 }
 
 img {
-  float: left;
   position: absolute;
   z-index: -1;
 }
@@ -55,6 +54,21 @@ h1 {
   font-size: 5em;
   text-align: center;
   color: #454543;
+  text-transform: uppercase;
+}
+
+@keyframes opacityPop {
+  0% {
+    color: #d70026;
+  }
+}
+h1.tooManyRyans {
+  animation: opacityPop 700ms ease-in-out;
+  animation-iteration-count: infinite;
+  font-size: 4em;
+}
+h1.tooManyRyans span {
+  font-size: 1.8em;
 }
 
 /*# sourceMappingURL=style.css.map */
