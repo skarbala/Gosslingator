@@ -1,0 +1,25 @@
+{
+  "name": "gosslingator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skarbala/Gosslingator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skarbala/Gosslingator/issues"
+  },
+  "homepage": "https://github.com/skarbala/Gosslingator#readme",
+  "devDependencies": {
+    "cypress": "^3.1.2"
+  },
+  "dependencies": {
+    "sass-watch": "^0.1.0"
+  }
+}

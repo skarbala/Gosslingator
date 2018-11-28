@@ -1,0 +1,60 @@
+$primary-color: #454543;
+$primary-font:'Monoton','serif';
+body {
+  background-image: url("assets/lightpaperfibers.png");
+}
+
+img {
+  float: left;
+  position: absolute;
+  z-index: -1;
+}
+
+div.buttons {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+button {
+  margin: 0 20px;
+  z-index: 0;
+  display: inline-block;
+  padding: 20px 50px;
+  background-color: $primary-color;
+  font-size: 1.5em;
+  border: none;
+  transition: all 200ms ease-in-out;
+  border-radius: 20px;
+  color: #fff;
+  font-family:$primary-font;
+  -webkit-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+  -moz-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+  box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
+  &:active {
+    -webkit-box-shadow: none;
+    transform: translate(8px, 8px);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: #767674;
+  }
+}
+
+button#addRyan:active {
+  background-color: #00d701;
+}
+
+button#removeRyan:active {
+  background-color: #d70026;
+}
+
+h1 {
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  font-family: $primary-font;
+  font-size: 5em;
+  text-align: center;
+  color: $primary-color;
+}
