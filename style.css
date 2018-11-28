@@ -4,18 +4,17 @@ body {
 
 img {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 div.buttons {
   text-align: center;
-  width: 1000px;
   margin: 0 auto;
 }
 
 button {
   margin: 0 20px;
-  z-index: 0;
+  z-index: 1;
   display: inline-block;
   padding: 20px 50px;
   background-color: #454543;
