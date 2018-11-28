@@ -28,7 +28,7 @@ new Vue({
             return this.ryans.length === 0;
         },
         tooManyRyans: function () {
-            return this.ryans.length === 50;
+            return this.ryans.length >= 50;
         }
     }
 })
