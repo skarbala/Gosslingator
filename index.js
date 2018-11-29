@@ -29,6 +29,10 @@ new Vue({
         },
         tooManyRyans: function () {
             return this.ryans.length >= 50;
+        },
+        ryanCounterDescription: function () {
+            if (this.ryans.length === 1) return 'ryan';
+            return 'ryans';
         }
     }
 })

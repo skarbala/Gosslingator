@@ -23,7 +23,7 @@ button {
   font-size: 1.5em;
   border: none;
   transition: all 200ms ease-in-out;
-  border-radius: 20px;
+  border-radius: 15px;
   color: #fff;
   font-family: $primary-font;
   -webkit-box-shadow: 10px 10px 43px -10px rgba(117, 117, 117, 1);
@@ -74,4 +74,22 @@ h1.tooManyRyans {
     font-size: 1.8em;
   }
 }
+
+div.ryan-counter {
+  position: absolute;
+  top: calc(100% - 200px);
+  left: calc(100% - 200px);
+  font-family: $primary-font;
+  color:$primary-color;
+  text-align: center;
+  h2{
+    margin:0;
+    font-size: 3em;
+  }
+  h3{
+  font-size: 2em;
+  }
+}
+
+
 

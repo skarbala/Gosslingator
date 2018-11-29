@@ -16,7 +16,8 @@
         @click="removeRyan"
         id="removeRyan"
         :class="{ disabled: isDisabled }"
-        :disabled="isDisabled">Ryan out!
+        :disabled="isDisabled">
+        Ryan out!
       </button>
     </div>
   </div>
@@ -29,6 +30,10 @@
     ></div>
   <div v-if="tooManyRyans">
     <h1 class="tooManyRyans">number of <br><span>ryans</span><br>is too damn<br><span>high</span></h1>
+  </div>
+  <div class="ryan-counter">
+    <h2 id="ryanCounter" v-html="ryans.length"></h2>
+    <h3 v-html="ryanCounterDescription">Ryans</h3>
   </div>
 </div>
 </body>
