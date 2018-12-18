@@ -86,4 +86,24 @@ div.ryan-counter h3 {
   font-size: 2em;
 }
 
+.ryan-enter-active, .ryan-leave-active {
+  animation: introduceRyan 0.3s ease-in;
+}
+
+.ryan-enter, .ryan-leave-to {
+  animation: introduceRyan 0.3s reverse ease-out;
+}
+
+@keyframes introduceRyan {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

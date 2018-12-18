@@ -5,7 +5,7 @@
   <title>Gosslingate me!</title>
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel='shortcut icon' type='image/x-icon' href='assets/ryan.ico' />
+  <link rel='shortcut icon' type='image/x-icon' href='assets/ryan.ico'/>
 
 </head>
 <body>
@@ -24,12 +24,16 @@
     </div>
   </div>
   <div>
-    <img v-for="ryan in ryans"
-         @click="removeSpecificRyan(ryan)"
-         src="assets/ryan.png"
-         :alt="ryan.id"
-         v-bind:style="{ width: ryan.width+ 'px', top:ryan.top + 'px', left:ryan.left + 'px'}"
-    ></div>
+    <transition-group name="ryan">
+      <img v-for="ryan in ryans"
+           @click="removeSpecificRyan(ryan)"
+           src="assets/ryan.png"
+           :alt="ryan.id"
+           v-bind:style="{ width: ryan.width+ 'px', top:ryan.top + 'px', left:ryan.left + 'px'}"
+           :key="ryan.id"
+      >
+    </transition-group>
+  </div>
   <div v-if="tooManyRyans">
     <h1 class="tooManyRyans">number of <br><span>ryans</span><br>is too damn<br><span>high</span></h1>
   </div>

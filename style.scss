@@ -80,14 +80,33 @@ div.ryan-counter {
   top: calc(100% - 200px);
   left: calc(100% - 200px);
   font-family: $primary-font;
-  color:$primary-color;
+  color: $primary-color;
   text-align: center;
-  h2{
-    margin:0;
+  h2 {
+    margin: 0;
     font-size: 3em;
   }
-  h3{
-  font-size: 2em;
+  h3 {
+    font-size: 2em;
+  }
+}
+.ryan-enter-active, .ryan-leave-active {
+  animation: introduceRyan 0.3s ease-in;
+}
+
+.ryan-enter, .ryan-leave-to {
+  animation: introduceRyan 0.3s reverse ease-out;
+}
+
+@keyframes introduceRyan {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
